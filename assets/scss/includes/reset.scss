@@ -179,7 +179,7 @@ button {
 	// align-items: center;
 }
 .owl-nav {
-	display: none;
+	// display: none;
 }
 .owl-dots {
 	display: none;
@@ -221,6 +221,9 @@ button {
 }
 section {
 	padding: 80px 0;
+	@include max-md {
+		padding: 48px 0;
+	}
 }
 .btn__next {
 	width: 13px;
@@ -263,15 +266,15 @@ select::-ms-expand {
 	border: 1px solid transparent;
 	max-width: 248px;
 	width: 100%;
-	@include max-md{
+	@include max-md {
 		max-width: 100%;
 	}
-	
+
 	&_transparent {
-		border: 1px solid #73204A;
-		color: #73204A;
+		border: 1px solid #73204a;
+		color: #73204a;
 		background-color: transparent;
-		@include max-md{
+		@include max-md {
 			max-width: 100%;
 		}
 	}
@@ -287,13 +290,30 @@ select::-ms-expand {
 	align-items: center;
 	column-gap: 24px;
 	margin-top: 40px;
-	@include max-lg{
+	@include max-lg {
 		column-gap: 10px;
 	}
-	@include max-md{
+	@include max-md {
 		flex-direction: column;
 		row-gap: 12px;
 		margin-top: 32px;
 	}
-	
+}
+.link {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	color: #73204a;
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+	&::after {
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11.5L6 6.5L1 1.5' stroke='%2373204A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+		width: 5px;
+		height: 9px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: block;
+	}
 }

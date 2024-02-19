@@ -10,3 +10,36 @@ $(".menu__close").click(function() {
     $(".menu").removeClass("active");
     $(".overlay").hide();
 });
+$('.reviews__slider').owlCarousel({
+    loop:true,
+    nav:true,
+    mouseDrag:true,
+    touchDrag: true,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:false,
+    dots:true,
+    autoplay:false,
+    margin: 18,
+    center: true,
+    responsive:{
+        0:{
+            items:2,
+            center: true
+        },
+        576:{
+            items:2
+        },
+        768:{
+            center: false,
+            items:2
+        },
+        992:{
+            center: false,
+            items:3
+        },
+        1400:{
+            items:3
+        }
+    }
+});
