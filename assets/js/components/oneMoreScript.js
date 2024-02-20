@@ -43,3 +43,29 @@ $('.reviews__slider').owlCarousel({
         }
     }
 });
+$(".addReview__add-file").click(function() {
+    $(".addReview__add-file_hidden").click();
+});
+var dropZone = document.getElementById('dropZone');
+
+dropZone.addEventListener('dragover', function(e) {
+  e.preventDefault();
+  dropZone.classList.add('dragover');
+});
+
+dropZone.addEventListener('dragleave', function() {
+  dropZone.classList.remove('dragover');
+});
+
+dropZone.addEventListener('drop', function(e) {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  var files = e.dataTransfer.files;
+  // Обрабатываем загруженные файлы
+});
+$(".addReview__heading svg, .close_popup").click(function() {
+    $(".addReview").hide();
+});
+$(".add_rev").click(function() {
+    $(".addReview").show();
+});

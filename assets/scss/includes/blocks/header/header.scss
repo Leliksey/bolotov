@@ -40,6 +40,9 @@
     &__item {
     }
     &__link {
+        &:hover {
+            color: #73204a;
+        }
     }
     &.active {
         transform: translateX(0);

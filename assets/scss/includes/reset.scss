@@ -266,6 +266,9 @@ select::-ms-expand {
 	border: 1px solid transparent;
 	max-width: 248px;
 	width: 100%;
+	&:hover {
+		color: #e9750e;
+	}
 	@include max-md {
 		max-width: 100%;
 	}
